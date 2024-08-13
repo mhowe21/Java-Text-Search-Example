@@ -7,14 +7,14 @@
 
 // Define the BoyerMoore class
 public class BoyerMooreAlgo {
-    private final int R; // The radix (size of the alphabet)
+    private final int R; // size of the character set
     private int[] right; // The bad-character skip array
     private String patterneString; // The patterneStringtern as a string
 
     // Constructor for the class it takes a string in this case the list of states.
     public BoyerMooreAlgo(String patterneString) {
-        this.R = 256; // Initialize the radix to the size of the ASCII character set
-        this.patterneString = patterneString; // Store the patterneStringtern
+        this.R = 256; // Initialize the character set to the size of the ASCII character set
+        this.patterneString = patterneString; // Store the patterneStringn as a string for the constructor
 
         // Initialize the right[] array to store the rightmost occurrence of each
         // character in the patterneStringtern
