@@ -28,7 +28,7 @@ public class Main {
                     String searchString = scanner.next();
                     // add the search string to the BoyerMooreAlgo class
                     BoyerMooreAlgo boyerMooreAlgo = new BoyerMooreAlgo(searchString);
-                    // use the search method to search for the pattern
+                    // use the search method to search for the in the US States dataset.
                     List<Integer> indices = boyerMooreAlgo.search(USStates);
                     // print the list of indices for the returned list of intidices
                     System.out.println("Pattern found at indices " + indices);
