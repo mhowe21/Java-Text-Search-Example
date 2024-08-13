@@ -26,7 +26,7 @@ public class Main {
                 case 2:
                     System.out.print("Enter Search Pattern: ");
                     String searchString = scanner.next();
-                    // add the main US states string to the algorithm
+                    // add the search string to the BoyerMooreAlgo class
                     BoyerMooreAlgo boyerMooreAlgo = new BoyerMooreAlgo(searchString);
                     // use the search method to search for the pattern
                     List<Integer> indices = boyerMooreAlgo.search(USStates);
