@@ -1,12 +1,19 @@
+/*
+ * Refrences:
+ * https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm
+ * https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/
+ * https://www.sanfoundry.com/java-program-boyer-moore-algorithm/
+ */
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class BoyerMooreAlgo {
-    private final int SIZE = 256; // size of the ASCII table
-    private int[] shiftTable; // the shift table
+    private final int SIZE = 256; // size of the ASCII table as a final as this will not change
+    private int[] shiftTable; // the shift table for moving the string pattern
 
-    private String pattern; // the pattern string
+    private String pattern; // the pattern string in this case us states.
 
     public BoyerMooreAlgo(String pattern) {
         this.pattern = pattern;
@@ -20,7 +27,7 @@ public class BoyerMooreAlgo {
             shiftTable[pattern.charAt(i)] = i;
     }
 
-    // Function that performs the search algorithm
+    // Function that performs the Boyer-Moore algorithm
     public List<Integer> search(String txt) {
         List<Integer> indices = new ArrayList<>();
         int m = pattern.length();
